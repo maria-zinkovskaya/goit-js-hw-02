@@ -19,9 +19,14 @@ do {
     continue;
   } else numbers.push(input);
 
-  console.log(numbers);
-  total += input;
   // eslint-disable-next-line no-constant-condition
 } while (true);
 
-console.log(`Общая сумма ${total}`);
+if (numbers.length === 0) {
+  alert('Вы ничего не ввели, попробуйте еще раз');
+} else {
+  for (let i = 0; i < numbers.length; i += 1) {
+    total += numbers[i];
+  }
+}
+console.log(`Общая сумма чисел равна ${total}`);
